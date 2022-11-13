@@ -12,5 +12,4 @@ class Ingredient(name_param: String, kilos_param: Double ) {
 
     val percent: Double
         get() = kilos / 1000
-
 }
