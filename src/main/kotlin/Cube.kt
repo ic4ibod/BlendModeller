@@ -1,6 +1,6 @@
 class Cube {
 
-    private val theCube: MutableList<Ingredient> = mutableListOf()
+    val theCube: MutableList<Ingredient> = mutableListOf()
 
     fun addIngredient (ingredient: Ingredient): Boolean {
         theCube.add(ingredient)
