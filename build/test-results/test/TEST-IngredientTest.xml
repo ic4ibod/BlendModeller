@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="IngredientTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-11-16T11:46:23" hostname="penguin" time="0.025">
+  <properties/>
+  <testcase name="test the second constructor works()" classname="IngredientTest" time="0.025"/>
+  <system-out><![CDATA[28.0
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
