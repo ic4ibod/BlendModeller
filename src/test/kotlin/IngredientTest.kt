@@ -5,6 +5,7 @@ import kotlin.test.BeforeTest
 internal class IngredientTest {
 
     val ingredient = Ingredient("n", 40.0)
+    val ingredient2 = Ingredient("n", 20, 50)
 
     @Test
     fun `test that we can make an ingredient object` (){
@@ -27,5 +28,12 @@ internal class IngredientTest {
     fun `test we get an uppercase name back` () {
         val expected: String = "n".uppercase()
         assertEquals(expected, ingredient.name)
+    }
+
+    @Test
+    fun `test the second constructor works` () {
+        assertTrue(ingredient2 is Ingredient)
+        assertTrue(ingredient2.kilos > 0)
+        println(ingredient2.kilos)
     }
 }
