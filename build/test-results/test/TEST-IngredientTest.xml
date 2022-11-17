@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="IngredientTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-11-16T11:46:23" hostname="penguin" time="0.025">
+<testsuite name="IngredientTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-11-17T09:07:06" hostname="CWLT22" time="0.013">
   <properties/>
-  <testcase name="test the second constructor works()" classname="IngredientTest" time="0.025"/>
-  <system-out><![CDATA[28.0
+  <testcase name="test the constructor with the normal distribution()" classname="IngredientTest" time="0.013"/>
+  <system-out><![CDATA[33.1359461462139
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
