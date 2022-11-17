@@ -1,5 +1,6 @@
 import java.util.*
 import kotlin.random.Random
+import org.apache.commons.math3.distribution.NormalDistribution
 
 class Ingredient(name_param: String, kilos_param: Double ) {
 
@@ -17,6 +18,14 @@ class Ingredient(name_param: String, kilos_param: Double ) {
         this.kilos = Random.nextInt(min_range,max_range).toDouble()
     }
 
+    constructor(name_param: String, listOfVals: List<Double>): this(name_param, 0.0) {
+        this.kilos = listOfVals.average()
+    }
+
+    constructor(name_param: String, mean: Double = 0.0, sdev: Double = 1.0): this(name_param, 0.0) {
+        val sample = NormalDistribution(mean, sdev).sample()
+        this.kilos = sample
+    }
 
 
 }

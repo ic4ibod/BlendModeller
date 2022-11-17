@@ -6,6 +6,9 @@ internal class IngredientTest {
 
     val ingredient = Ingredient("n", 40.0)
     val ingredient2 = Ingredient("n", 20, 50)
+    val testList: List<Double> = listOf<Double>(12.3, 34.9, 44.4, 76.5, 88.8)
+    val ingredient3 = Ingredient("N", testList)
+    val ingredient4 = Ingredient("n", 32.1, 4.6)
 
     @Test
     fun `test that we can make an ingredient object` (){
@@ -35,5 +38,16 @@ internal class IngredientTest {
         assertTrue(ingredient2 is Ingredient)
         assertTrue(ingredient2.kilos > 0)
         println(ingredient2.kilos)
+    }
+
+    @Test
+    fun `test the thrid constructor - the list - works` () {
+        val expected = testList.average()
+        assertEquals(expected, ingredient3.kilos)
+    }
+
+    @Test
+    fun `test the constructor with the normal distribution` () {
+        println(ingredient4.kilos)
     }
 }
