@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="IngredientTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-11-18T08:28:50" hostname="CWLT22" time="0.013">
+  <properties/>
+  <testcase name="test we get a value back as a percentage()" classname="IngredientTest" time="0.013"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
