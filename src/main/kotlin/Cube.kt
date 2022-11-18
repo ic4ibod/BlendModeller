@@ -1,5 +1,7 @@
 class Cube {
 
+    //TODO: Add a way of stopping the ingredients exceeding 1000 kilos
+
     val theCube: MutableList<Ingredient> = mutableListOf()
 
     fun addIngredient (ingredient: Ingredient): Boolean {
