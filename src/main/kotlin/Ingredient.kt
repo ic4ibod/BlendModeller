@@ -2,14 +2,17 @@ import java.util.*
 import kotlin.random.Random
 import org.apache.commons.math3.distribution.NormalDistribution
 
-class Ingredient(name_param: String, kilos_param: Double ) {
-
+class Ingredient(name_param: String) {
     val name: String = name_param
         get() = field.uppercase(Locale.getDefault())
-    var kilos: Double = kilos_param
+
+    var kilos: Double = 0.0
         set(value) {
             if ((value > 0) && (value < 1000)) field = value
         }
+    constructor(name_param: String, kilos_param: Double): this(name_param) {
+        this.kilos = kilos_param
+    }
 
     val percent: Double
         get() = kilos / 1000

@@ -1,9 +1,9 @@
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
-import kotlin.test.BeforeTest
 
 internal class IngredientTest {
 
+    val ingredient0 = Ingredient("N")
     val ingredient = Ingredient("n", 40.0)
     val ingredient2 = Ingredient("n", 20, 50)
     val testList: List<Double> = listOf<Double>(12.3, 34.9, 44.4, 76.5, 88.8)
@@ -11,8 +11,8 @@ internal class IngredientTest {
     val ingredient4 = Ingredient("n", 32.1, 4.6)
 
     @Test
-    fun `test that we can make an ingredient object` (){
-        assertTrue( ingredient is Ingredient)
+    fun `test that we can make an ingredient with just a name` () {
+        assertEquals(0.0, ingredient0.kilos)
     }
 
     @Test
@@ -35,7 +35,6 @@ internal class IngredientTest {
 
     @Test
     fun `test the second constructor works` () {
-        assertTrue(ingredient2 is Ingredient)
         assertTrue(ingredient2.kilos > 0)
         println(ingredient2.kilos)
     }
