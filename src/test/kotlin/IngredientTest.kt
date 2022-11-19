@@ -1,6 +1,7 @@
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
 
+
 internal class IngredientTest {
 
     val ingredient0 = Ingredient("N")

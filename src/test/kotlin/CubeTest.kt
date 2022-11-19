@@ -12,16 +12,19 @@ internal class CubeTest {
         "k" to 31.0,
         "s" to 4.0
         )
+    val totalWeight: Double = nutrients.values.sum()
+    val remaining: Double = 1000 - totalWeight
 
     val testCube = Cube()
 
     @Test
     fun `add ingredients to a cube` () {
-    // Bit of a pointless test; just checing it works
         for ((name, amount) in nutrients) {
             testCube.addIngredient(Ingredient(name, amount))
-
         }
+        assertEquals(this.totalWeight, testCube.used)
+        assertEquals(this.remaining, testCube.remaining)
+
     }
 
     @Test
@@ -37,13 +40,12 @@ internal class CubeTest {
 
     @Test
     fun `get total kgs of ingredients in cube` () {
-
         var expected: Double = 0.0
         for ((name, amount) in nutrients) {
             testCube.addIngredient(Ingredient(name, amount))
             expected += amount
         }
-        val totalKgs = testCube.totalKgsIngredients()
+        val totalKgs = testCube.used
         assertEquals(expected, totalKgs)
     }
 
@@ -56,7 +58,7 @@ internal class CubeTest {
         }
         expected = 1000 - expected
 
-        val remaining = testCube.totalRemaining()
+        val remaining = testCube.remaining
         assertEquals(expected, remaining)
     }
 
