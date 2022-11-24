@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="IngredientKoTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-11-24T08:53:39" hostname="CWLT22" time="0.021">
+  <properties/>
+  <testcase name="test we can read values from an ingredient object" classname="IngredientKoTest" time="0.021"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

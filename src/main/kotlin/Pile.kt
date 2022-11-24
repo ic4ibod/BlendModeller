@@ -14,7 +14,7 @@ class Pile {
         var totalKilos = 0.0
         for (cube in pile) {
             for ( ingredient in cube.theCube) {
-                if (ingredient.name.equals(nutrient)) totalKilos += ingredient.kilos
+                if (ingredient.key.equals(nutrient)) totalKilos += ingredient.value
             }
         }
         return totalKilos/this.pileSize
@@ -24,7 +24,7 @@ class Pile {
 
         val  nutrientNames: MutableSet<String> = mutableSetOf()
         for (cube in pile) {
-            for (ingredient in cube.theCube) nutrientNames.add(ingredient.name)
+            for (ingredient in cube.theCube) nutrientNames.add(ingredient.key)
         }
 
         val report: MutableMap<String, Double> = mutableMapOf()

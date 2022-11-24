@@ -11,37 +11,20 @@ import org.apache.commons.math3.distribution.NormalDistribution
  * @property[kilos] The number of kilos of the ingredient (can't be > 1000)
  * @constructor Creates an empty ingredient with name only
  */
-class Ingredient(name_param: String) {
-    val name: String = name_param
-        get() = field.uppercase(Locale.getDefault())
-
-    //TODO: What happens if the ingredient is more than 1000 kilos?
-    var kilos: Double = 0.0
-        set(value) {
-            if ((value > 0) && (value < 1000)) field = value
-        }
-
-    /**
-     * Instatiates ingredient with a set weight in kilos
-     *
-     * @param[kilos_param] The weight in kilos of the ingredient
-     */
-    constructor(name_param: String, kilos_param: Double): this(name_param) {
-        this.kilos = kilos_param
-    }
+data class Ingredient(override val key: String, override var value: Double): Map.Entry<String, Double> {
 
     val percent: Double
-        get() = kilos / 1000
+        get() = value / 1000
 
     /**
      * Instantiates an ingredient with a random kilo values
      *
-     * @param[name_param] The name of th ingredient
+     * @param[key_param] The name of th ingredient
      * @param[min_range] The minimum value used to define the random range
      * @param[max_range] The maximum value used to define the random range
      */
-    constructor(name_param: String, min_range: Int = 0, max_range: Int = 0): this(name_param, 0.0) {
-        this.kilos = Random.nextInt(min_range,max_range).toDouble()
+    constructor(key_param: String, min_range: Int = 0, max_range: Int = 0): this(key_param, 0.0) {
+        this.value = Random.nextInt(min_range,max_range).toDouble()
     }
 
     /**
@@ -51,7 +34,7 @@ class Ingredient(name_param: String) {
      * @param[listOfVals] A list of weights (from analysis)
      */
     constructor(name_param: String, listOfVals: List<Double>): this(name_param, 0.0) {
-        this.kilos = listOfVals.average()
+        this.value = listOfVals.average()
     }
 
     /**
@@ -63,7 +46,7 @@ class Ingredient(name_param: String) {
      */
     constructor(name_param: String, mean: Double = 0.0, sdev: Double = 1.0): this(name_param, 0.0) {
         val sample = NormalDistribution(mean, sdev).sample()
-        this.kilos = sample
+        this.value = sample
     }
 
 

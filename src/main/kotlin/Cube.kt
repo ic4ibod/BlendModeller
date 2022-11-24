@@ -28,7 +28,7 @@ class Cube {
     fun getIngredients(): Set<String> {
         val ingredients: MutableSet<String> = mutableSetOf()
         for (ingredient in theCube) {
-            ingredients.add(ingredient.name)
+            ingredients.add(ingredient.key)
         }
         return ingredients
     }
@@ -38,7 +38,7 @@ class Cube {
      */
     private fun totalKgsIngredients(): Double {
         var totalKgs = 0.0
-        theCube.forEach { totalKgs += it.kilos }
+        theCube.forEach { totalKgs += it.value }
         return totalKgs
     }
 }
