@@ -2,6 +2,8 @@ import java.util.*
 import kotlin.random.Random
 import org.apache.commons.math3.distribution.NormalDistribution
 
+// TODO: Convert to data class
+
 /**
  * Class for Ingredient object that builds the Cube
  *

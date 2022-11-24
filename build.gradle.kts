@@ -14,6 +14,7 @@ repositories {
 dependencies {
     implementation("org.apache.commons:commons-math3:3.6.1")
     testImplementation(kotlin("test"))
+    testImplementation("io.kotest:kotest-runner-junit5-jvm:4.6.0")
 }
 
 tasks.test {
