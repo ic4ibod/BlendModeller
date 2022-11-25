@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="IngredientTestKotest" tests="4" skipped="0" failures="0" errors="0" timestamp="2022-11-22T00:39:04" hostname="penguin" time="0.066">
+  <properties/>
+  <testcase name="test that we can make an ingredient with just a name" classname="IngredientTestKotest" time="0.029"/>
+  <testcase name="kilos" classname="IngredientTestKotest" time="0.01"/>
+  <testcase name="(1) kilos" classname="IngredientTestKotest" time="0.001"/>
+  <testcase name="percent" classname="IngredientTestKotest" time="0.0"/>
+  <system-out><![CDATA[WARN: Duplicated test name kilos. To disable this message, set DuplicateTestNameMode to Silent.
+WARN: Duplicated test name kilos. To disable this message, set DuplicateTestNameMode to Silent.
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -22,9 +22,13 @@ data class Ingredient(override val key: String, override var value: Double): Map
      * @param[key_param] The name of th ingredient
      * @param[min_range] The minimum value used to define the random range
      * @param[max_range] The maximum value used to define the random range
+     * @param[test] USed in testing. Sets random seed to 42
      */
-    constructor(key_param: String, min_range: Int = 0, max_range: Int = 0): this(key_param, 0.0) {
-        this.value = Random.nextInt(min_range,max_range).toDouble()
+    constructor(key_param: String, min_range: Int = 0, max_range: Int = 0, test:Boolean = false): this(key_param, 0.0) {
+        when (test) {
+            true -> this.value = Random(42).nextInt(min_range,max_range).toDouble()
+            false ->this.value = Random.nextInt(min_range,max_range).toDouble()
+        }
     }
 
     /**
